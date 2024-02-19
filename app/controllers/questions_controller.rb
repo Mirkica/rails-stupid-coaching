@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   end
 
   def answer
+    @question = params[:question]
     if params[:question] == 'I am going to work'
       @response = 'Great!'
     elsif params[:question].ends_with?('?')
